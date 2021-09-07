@@ -1,0 +1,25 @@
+.error-wrapper{
+    text-align: center;
+}
+.error-title{
+    font-size: 7rem;
+    margin-top: 8rem;
+}
+.error-description{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 auto 10rem;
+}
+.home-link{
+    display: block;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width:750px) {
+    .error-title{
+        font-size: 20rem;
+        margin-top: 3rem;
+    }
+}

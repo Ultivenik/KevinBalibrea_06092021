@@ -1,0 +1,15 @@
+footer{
+    background: #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+.logo-footer{
+    margin: 1rem auto;
+}
+.copyright{
+    color: #fff;
+}

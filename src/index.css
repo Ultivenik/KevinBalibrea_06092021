@@ -1,0 +1,15 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+    /* margin: 0; */
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6060;
+}
+body{
+    margin: 0;
+}
+:root{
+    font-size: 16px;
+}

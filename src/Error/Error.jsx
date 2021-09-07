@@ -5,13 +5,13 @@ import './Error.css'
 export default class Error extends Component {
     render(){
         return(
-            <section className="error-wrapper">
+            <main className="error-wrapper">
                 <h1 className="error-title">404</h1>
                 <p className="error-description">Oups! La page que vous demandez n'existe pas.</p>
                 <span className="home-link">
                     <Link to="/">Retourner sur la page d’accueil</Link>
                 </span>
-            </section>
+            </main>
         )
     }
 }

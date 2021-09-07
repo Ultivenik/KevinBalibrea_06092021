@@ -1,0 +1,22 @@
+.main-title{
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.282);
+    position: absolute;
+    top: 0rem;
+    margin: 0;
+    border-radius: 10px;
+    padding: 1.7rem 1rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:750px) {
+    .main-title{
+        /* top: 6.7rem;
+        margin: 3.2rem 1.3rem;
+        width: 83.2%; */
+        font-size: 2.5rem;
+        padding: 5rem 35.1rem;
+        text-align: center;
+    }
+}

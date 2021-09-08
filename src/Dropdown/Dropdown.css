@@ -38,4 +38,7 @@
     .dropdown i, .dropdown h2{
         font-size: 1.3rem;
     }
+    .dropdown-content{
+        font-size: 1rem;
+    }
 }

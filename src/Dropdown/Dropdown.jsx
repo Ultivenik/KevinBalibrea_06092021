@@ -11,7 +11,7 @@ export default class Dropdown extends Component{
     }
     openDropdown(){
         this.setState((state) =>{
-            return{
+            return {
                 isOpen: !state.isOpen,
             }
         })

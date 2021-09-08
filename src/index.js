@@ -7,6 +7,7 @@ import About from './About/About'
 import Error from './Error/Error'
 import './index.css'
 import Footer from './Footer/Footer'
+import Room from './Room/Room'
 
 class App extends Component{
     render(){
@@ -17,9 +18,10 @@ class App extends Component{
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path="/À propos">
+                    <Route path="/Apropos">
                         <About />
                     </Route>
+                    <Route exact path="/:id/" children={<Room />} />
                     <Route>
                         <Error />
                     </Route>

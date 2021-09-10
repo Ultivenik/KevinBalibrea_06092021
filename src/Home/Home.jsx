@@ -11,7 +11,7 @@ export default class Home extends Component{
             <main className="main">
                 <section className="maintitle-bg">
                     <Background src={backgroundhome} alt="image de fond montagnes" />
-                    <MainTitlePage title="Chez vous, partout et ailleurs" />
+                    <MainTitlePage class="main-title" title="Chez vous, partout et ailleurs" />
                 </section>
                 <AppartmentGallery />
             </main>

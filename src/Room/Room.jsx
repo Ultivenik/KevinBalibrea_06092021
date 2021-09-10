@@ -6,6 +6,8 @@ import Dropdown from '../Dropdown/Dropdown'
 import Tags from '../Tags/Tags'
 import Avatar from '../Avatar/Avatar'
 import Rating from '../Rating/Rating'
+import RoomPageTitle from '../RoomPageTitle/RoomPageTitle'
+import MainTitlePage from '../MainTitlePage/MainTitlePage'
 
 class Room extends Component{
     constructor(props){
@@ -57,8 +59,8 @@ class Room extends Component{
         return(
             <main className="main">
                 <Gallery image={this.state.pictures} />
-                <h1 className="room-title">{this.state.title}</h1>
-                <h2 className="room-location">{this.state.location}</h2>
+                <MainTitlePage class="room-title" title={this.state.title} />
+                <RoomPageTitle class="room-location" />
                 <Tags tags={this.state.tags} />
                 <div className="rate-and-profile">
                     <div className="rating">

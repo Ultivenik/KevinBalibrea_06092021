@@ -4,7 +4,7 @@ import'./MainTitlePage.css'
 export default class MainTitlePage extends Component{
     render(){
         return(
-            <h1 className="main-title">{this.props.title}</h1>
+            <h1 className={this.props.class}>{this.props.title}</h1>
         )
     }
 }

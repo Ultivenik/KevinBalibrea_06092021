@@ -6,10 +6,10 @@ export default class Error extends Component {
     render(){
         return(
             <main className="error-wrapper">
-                <h1 className="error-title">404</h1>
-                <p className="error-description">Oups! La page que vous demandez n'existe pas.</p>
+                <h1 className="error-title">{this.props.error}</h1>
+                <p className="error-description">{this.props.description}</p>
                 <span className="home-link">
-                    <Link to="/">Retourner sur la page d’accueil</Link>
+                    <Link to="/">{this.props.back}</Link>
                 </span>
             </main>
         )

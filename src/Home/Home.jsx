@@ -5,7 +5,6 @@ import MainTitlePage from '../MainTitlePage/MainTitlePage'
 import backgroundhome from './../images/backgroundhome.png'
 import './Home.css'
 
-
 export default class Home extends Component{
     render(){
         return(

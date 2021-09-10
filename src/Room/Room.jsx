@@ -1,12 +1,22 @@
 import React, {Component} from 'react'
 import'./Room.css'
 import {withRouter} from 'react-router-dom'
+import Gallery from '../Gallery/Gallery'
 
 class Room extends Component{
     constructor(props){
         super(props)
         this.state = {
-            item: []
+            id: null,
+            title: null,
+            cover:null,
+            pictures:[],
+            description: null,
+            host: {},
+            rating:null,
+            location:null,
+            equipments:[],
+            tags:[],
         }
     }
 
@@ -14,25 +24,31 @@ class Room extends Component{
         fetch("../../logements.json")
         .then(response => response.json())
         .then(datas => {
-            const resultsDatas = datas
-            this.setState({
-                item: resultsDatas
+            datas.forEach((room) =>{
+                if (room.id === this.props.location.pathname.substring(2)) {
+                    this.setState({
+                        id: room.id,
+                        title: room.title,
+                        cover:room.cover,
+                        pictures:room.pictures,
+                        description: room.description,
+                        host: room.host,
+                        rating: room.rating,
+                        location: room.location,
+                        equipments: room.equipments,
+                        tags:room.tags,
+                    })
+                }
             })
         })
     }
 
     render(){
-        const {location} = this.props
-        console.log(location);
+        // const infos = this.state.item
         return(
             <main className="main">
-                LA ROOM DE {location.pathname} et 
-                {this.state.item.map((infos,key)=>
-                <div key={key}>
-                        {infos.id.indexOf(location.pathname.slice(2)) ? <span>{infos.id}</span> : null}
-
-                </div>
-                )}
+                j'affiche l'id de {this.state.id}
+                <Gallery image={this.state.pictures} />
             </main>
         )
     }

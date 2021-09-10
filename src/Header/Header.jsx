@@ -17,7 +17,7 @@ export default class Header extends Component{
                             <Link to="/"> {this.props.home} </Link>
                         </li>
                         <li className="links">
-                            <Link to={"/" + this.props.about}> {this.props.about} </Link>
+                            <Link to="/Apropos"> {this.props.about} </Link>
                         </li>
                     </ul>
                 </nav>

@@ -5,59 +5,37 @@ export default class Gallery extends Component{
     constructor(props){
         super(props)
         this.state = {
-            current: 0
+            currentImageIndex: 0
         }
-        this.previousImage.bind(this)
-        this.nextImage.bind(this)
+        this.previousImage = this.previousImage.bind(this)
+        this.nextImage = this.nextImage.bind(this)
     }
 
-    goToSlide(index){
-        this.setState({
-            current: index
-        })
-    }
-    previousImage(e){
-        e.preventDefault()
-        let index = this.state.current
-        let {slides} = this.props
-        let lengthSlide = slides.length
+    previousImage(){
+        const lastIndex = this.props.image.length - 1
+        const index =  this.state.currentImageIndex === 0 ? lastIndex : this.state.currentImageIndex - 1
 
-        if (index < 1) {
-            index = lengthSlide
-        }
-        --index
         this.setState({
-            current: index
+            currentImageIndex: index
         })
     }
 
-    nextImage(e){
-        e.preventDefault()
-        let index = this.state.current
-        let {slides} = this.props
-        let lengthSlide = slides.length -1
+    nextImage(){
+        const lastIndex = this.props.image.length -1
+        const index =  this.state.currentImageIndex === lastIndex ? 0 : this.state.currentImageIndex + 1
 
-        if (index === lengthSlide) {
-            index = -1
-        }
-        ++index
         this.setState({
-            current: index
+            currentImageIndex: index
         })
     }
+
     render(){
-        console.log(this.props);
         return(
             <section>
                 <div className="carousel">
                     <i className="fas fa-chevron-left" onClick={this.previousImage}></i>
                     <i className="fas fa-chevron-right" onClick={this.nextImage}></i>
-                    {this.props.image.map((img, key) =>{
-                        return(
-                            key === this.state.current &&
-                            <img key={key} src={img} alt="galerie" />
-                        )
-                    })}
+                    <img src={this.props.image[this.state.currentImageIndex]} alt="galerie" />
                 </div>
             </section>
         )

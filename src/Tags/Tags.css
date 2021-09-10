@@ -1,0 +1,12 @@
+.tag-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tag{
+    background: #FF6060;
+    color: #fff;
+    padding: .2rem 1.5em;
+    margin: .7rem .7rem 0 0;
+    border-radius: 7px;
+    font-size: .8rem;
+}

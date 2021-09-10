@@ -1,0 +1,17 @@
+.room-title, .room-location{
+    font-weight: 500;
+    margin: 0;
+}
+.room-title{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.room-location{
+    font-size: 1rem;
+    margin: 1rem 0 .4rem 0;
+}
+.rate-and-profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

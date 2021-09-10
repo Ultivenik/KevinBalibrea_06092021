@@ -1,0 +1,22 @@
+.carousel{
+    display: flex;
+    overflow: hidden;
+    height: 20rem;
+    position: relative;
+    border-radius: 15px;
+}
+.carousel img{
+    object-fit: cover;
+}
+.carousel i {
+    position: absolute;
+    top:50%;
+    color: #fff;
+    font-size: 2rem;
+}
+.fa-chevron-left{
+    left: 1rem;
+}
+.fa-chevron-right{
+    right:1rem;
+}

@@ -24,9 +24,9 @@ export default class AppartmentGallery extends Component {
             <section className="section-appartment">
                 {this.state.item.map((items, key)=>
                     <Link key={key} to={"/:" + items.id}>
-                        <figure className="room-profile">
+                        <figure className="appartment-profile">
                             <img src={items.cover} alt="logement" />
-                            <figcaption className="room-title">
+                            <figcaption className="appartment-title">
                                 {items.title}
                             </figcaption>
                         </figure>

@@ -1,0 +1,14 @@
+.avatar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6.5rem;
+}
+.avatar-title{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.avatar-img{
+    border-radius: 50%;
+    width: 3rem;
+}

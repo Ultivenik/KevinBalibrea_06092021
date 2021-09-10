@@ -6,6 +6,7 @@ export default class Dropdown extends Component{
         super(props)
         this.state = {
             isOpen: false,
+            aboutDatas: []
         }
         this.openDropdown = this.openDropdown.bind(this)
     }
@@ -16,15 +17,16 @@ export default class Dropdown extends Component{
             }
         })
     }
+
     render(){
         return(
-            <div className="dropdown" onClick={this.openDropdown}>
-                <div className="dropdown-flex">
-                    <h2 className="dropdown-title">{this.props.dropdownTitle}</h2>
+            <div className={this.props.classWrapper} onClick={this.openDropdown}>
+                <div className={this.props.classTitleWrapper}>
+                    <h2 className={this.props.classTitle}>{this.props.dropdownTitle}</h2>
                     {this.state.isOpen ? <i className="fas fa-chevron-up"></i> : <i className="fas fa-chevron-down"></i>}
                 </div>
                 {this.state.isOpen &&(
-                    <div className="dropdown-content">
+                    <div className={this.props.classContent}>
                         {this.props.content}
                     </div>
                 )}

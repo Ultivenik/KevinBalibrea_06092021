@@ -1,0 +1,7 @@
+@media screen and (min-width:750px) {
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

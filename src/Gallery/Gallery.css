@@ -20,3 +20,12 @@
 .fa-chevron-right{
     right:1rem;
 }
+
+@media screen and (min-width:750px) {
+    .carousel{
+        height: 37rem;
+    }
+    .carousel img{
+        width: 100%;
+    }
+}

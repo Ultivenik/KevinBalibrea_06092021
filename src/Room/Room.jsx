@@ -57,17 +57,21 @@ class Room extends Component{
             stars.push(<Rating key={i} colored={i < this.state.rating ? "#FF6060" : "#E3E3E3"} />)
         }
         return(
-            <main className="main">
+            <main className="main room">
                 <Gallery image={this.state.pictures} />
-                <MainTitlePage class="room-title" title={this.state.title} />
-                <RoomPageTitle class="room-location" title={this.state.location} />
-                <Tags tags={this.state.tags} />
-                <div className="rate-and-profile">
-                    <div className="rating">
-                        {stars}
+                <section className="profile">
+                    <div>
+                        <MainTitlePage class="room-title" title={this.state.title} />
+                        <RoomPageTitle class="room-location" title={this.state.location} />
+                        <Tags tags={this.state.tags} />
                     </div>
-                    <Avatar host={this.state.host} />
-                </div>
+                    <div className="rate-and-profile">
+                        <div className="rating">
+                            {stars}
+                        </div>
+                        <Avatar host={this.state.host} />
+                    </div>
+                </section>
                 <section className="collapse-rooms">
                     <Dropdown
                         dropdownTitle="Description"

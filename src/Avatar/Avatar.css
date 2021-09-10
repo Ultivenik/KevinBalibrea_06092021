@@ -12,3 +12,16 @@
     border-radius: 50%;
     width: 3rem;
 }
+
+@media screen and (min-width:750px) {
+    .avatar{
+        order: 1;
+        width: 11.6rem;
+    }
+    .avatar-title{
+        font-size: 1.3rem;
+    }
+    .avatar-img{
+        width: 5rem;
+    }
+}

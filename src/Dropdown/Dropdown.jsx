@@ -6,6 +6,7 @@ export default class Dropdown extends Component{
         super(props)
         this.state = {
             isOpen: false,
+            isRotated: false,
             aboutDatas: []
         }
         this.openDropdown = this.openDropdown.bind(this)
@@ -14,6 +15,7 @@ export default class Dropdown extends Component{
         this.setState((state) =>{
             return {
                 isOpen: !state.isOpen,
+                isRotated: !state.isRotated
             }
         })
     }
@@ -23,13 +25,13 @@ export default class Dropdown extends Component{
             <div className={this.props.classWrapper} onClick={this.openDropdown}>
                 <div className={this.props.classTitleWrapper}>
                     <h2 className={this.props.classTitle}>{this.props.dropdownTitle}</h2>
-                    {this.state.isOpen ? <i className="fas fa-chevron-up"></i> : <i className="fas fa-chevron-down"></i>}
+                    {this.state.isRotated ? <i className="fas fa-chevron-up"></i> : <i className="fas fa-chevron-down"></i>}
                 </div>
-                {this.state.isOpen &&(
-                    <div className={this.props.classContent}>
+                {this.state.isOpen ?
+                   ( <div className={this.props.classContent}>
                         {this.props.content}
-                    </div>
-                )}
+                    </div>) : null
+                }
             </div>
         )
     }

@@ -60,7 +60,7 @@ class Room extends Component{
             <main className="main">
                 <Gallery image={this.state.pictures} />
                 <MainTitlePage class="room-title" title={this.state.title} />
-                <RoomPageTitle class="room-location" />
+                <RoomPageTitle class="room-location" title={this.state.location} />
                 <Tags tags={this.state.tags} />
                 <div className="rate-and-profile">
                     <div className="rating">

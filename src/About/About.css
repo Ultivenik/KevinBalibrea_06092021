@@ -1,7 +1,18 @@
+.about-bg{
+    background: url("./../images/about-bg.png") no-repeat;
+    background-size: cover;
+    height: 14rem;
+}
+
 @media screen and (min-width:750px) {
     .about{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    .about-bg{
+        background: url("./../images/backgroundabout.png") no-repeat;
+        background-size: cover;
+        height: 19rem;
     }
 }

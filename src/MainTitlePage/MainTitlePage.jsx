@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import'./MainTitlePage.css'
+    // import'./MainTitlePage.css'
 
 export default class MainTitlePage extends Component{
     render(){

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Background from '../Background/Background'
 import Dropdown from '../Dropdown/Dropdown'
+import mobileBg from './../images/about-bg.png'
 import backgroundAbout from './../images/backgroundabout.png'
 import './About.css'
 
@@ -24,7 +25,7 @@ export default class About extends Component{
     render(){
         return(
             <main className="main about">
-                <Background src={backgroundAbout} alt="montagne" />
+                <Background class="background about-bg" src={mobileBg} srcSet={backgroundAbout} alt="montagne" />
                 <Dropdown
                     dropdownTitle="Fiabilité"
                     content={this.state.aboutDatas.fiabilite}

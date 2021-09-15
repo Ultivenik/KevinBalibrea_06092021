@@ -32,7 +32,7 @@ class Room extends Component{
         .then(datas => {
             datas.forEach((room) =>{
                 if (room.id === this.props.location.pathname.substring(2)) {
-                    this.setState({
+                    return this.setState({
                         id: room.id,
                         title: room.title,
                         cover:room.cover,

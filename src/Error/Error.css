@@ -20,6 +20,13 @@
 @media screen and (min-width:750px) {
     .error-title{
         font-size: 20rem;
-        margin-top: 3rem;
+        margin: 0;
+    }
+    .error-description{
+        font-size: 3rem;
+        margin: 3rem 0 15rem;
+    }
+    .home-link{
+        margin-bottom: 10rem;
     }
 }

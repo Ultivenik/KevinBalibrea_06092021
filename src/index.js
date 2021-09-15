@@ -21,7 +21,7 @@ class App extends Component{
                     <Route path="/Apropos">
                         <About />
                     </Route>
-                    <Route path="/:id/">
+                    <Route path="/:id">
                         <Room />
                     </Route>
                     <Route>

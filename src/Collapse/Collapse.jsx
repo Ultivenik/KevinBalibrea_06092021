@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './Dropdown.css'
+import './Collapse.css'
 
 export default class Dropdown extends Component{
     constructor(props){

@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import'./Room.css'
 import {withRouter} from 'react-router-dom'
 import Gallery from '../Gallery/Gallery'
-import Dropdown from '../Dropdown/Dropdown'
+import Collapse from '../Collapse/Collapse'
 import Tags from '../Tags/Tags'
 import Avatar from '../Avatar/Avatar'
 import Rating from '../Rating/Rating'
@@ -46,6 +46,9 @@ class Room extends Component{
                     })
                 }
             })
+            if(!this.state.id){
+                   this.props.history.push("/notfound")
+            }
         })
     }
 
@@ -73,7 +76,7 @@ class Room extends Component{
                     </div>
                 </section>
                 <section className="collapse-rooms">
-                    <Dropdown
+                    <Collapse
                         dropdownTitle="Description"
                         content={this.state.description}
                         classWrapper="dropdown"
@@ -81,7 +84,7 @@ class Room extends Component{
                         classTitle="dropdown-title"
                         classContent="dropdown-content"
                     />
-                    <Dropdown
+                    <Collapse
                         dropdownTitle="Equipements"
                         content={
                             <ul>

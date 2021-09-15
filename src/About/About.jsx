@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Background from '../Background/Background'
-import Dropdown from '../Dropdown/Dropdown'
+import Collapse from '../Collapse/Collapse'
 import mobileBg from './../images/about-bg.png'
 import backgroundAbout from './../images/backgroundabout.png'
 import './About.css'
@@ -26,7 +26,7 @@ export default class About extends Component{
         return(
             <main className="main about">
                 <Background class="background about-bg" src={mobileBg} srcSet={backgroundAbout} alt="montagne" />
-                <Dropdown
+                <Collapse
                     dropdownTitle="Fiabilité"
                     content={this.state.aboutDatas.fiabilite}
                     classWrapper="dropdown"
@@ -34,7 +34,7 @@ export default class About extends Component{
                     classTitle="dropdown-title"
                     classContent="dropdown-content"
                 />
-                <Dropdown
+                <Collapse
                     dropdownTitle="Respect"
                     content={this.state.aboutDatas.respect}
                     classWrapper="dropdown"
@@ -42,7 +42,7 @@ export default class About extends Component{
                     classTitle="dropdown-title"
                     classContent="dropdown-content"
                 />
-                <Dropdown
+                <Collapse
                     dropdownTitle="Service"
                     content={this.state.aboutDatas.service}
                     classWrapper="dropdown"
@@ -50,7 +50,7 @@ export default class About extends Component{
                     classTitle="dropdown-title"
                     classContent="dropdown-content"
                 />
-                <Dropdown
+                <Collapse
                     dropdownTitle="Sécurité"
                     content={this.state.aboutDatas.securite}
                     classWrapper="dropdown"

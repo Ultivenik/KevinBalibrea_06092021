@@ -21,11 +21,11 @@ class App extends Component{
                     <Route path="/Apropos">
                         <About />
                     </Route>
-                    <Route path="/:id">
-                        <Room />
-                    </Route>
-                    <Route>
+                    <Route path="/notfound">
                         <Error error="404" description="Oups! La page que vous demandez n'existe pas." back="Retourner sur la page d’accueil" />
+                    </Route>
+                    <Route path="/:id/">
+                        <Room />
                     </Route>
                 </Switch>
                 <Footer alt="logo de Kasa" copyright="© 2020 Kasa. All rights reserved"/>

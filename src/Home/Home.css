@@ -27,7 +27,7 @@
         margin: 2rem 6rem;
     }
     .main-title{
-        font-size: 2.8rem;
+        font-size: 1.8rem;
         padding: 7rem;
         text-align: center;
         border-radius: 25px;
@@ -36,5 +36,10 @@
         background: url("./../images/backgroundhome.png") no-repeat ;
         background-size: cover;
         height: 15rem;
+    }
+}
+@media screen and (min-width:1550px){
+    .main-title{
+        font-size: 2.8rem;
     }
 }

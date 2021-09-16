@@ -21,7 +21,7 @@
     text-decoration: underline;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width:1150px) {
     .header{
         margin: 2rem 6rem;
     }

@@ -10,8 +10,9 @@ export default class Home extends Component{
         return(
             <main className="main">
                 <section className="maintitle-bg">
-                    <Background class="background home-bg" src={backgroundhome} alt="image de fond montagnes" children={<MainTitlePage class="main-title" title="Chez vous, partout et ailleurs" />}/>
-                        
+                    <Background class="background home-bg" src={backgroundhome} alt="image de fond montagnes"
+                        children={<MainTitlePage class="main-title" title="Chez vous, partout et ailleurs" />}
+                    />
                 </section>
                 <AppartmentGallery />
             </main>

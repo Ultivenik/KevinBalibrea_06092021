@@ -14,10 +14,14 @@ export default class Gallery extends Component{
     previousImage(){
         const lastIndex = this.props.image.length - 1
         const index =  this.state.currentImageIndex === 0 ? lastIndex : this.state.currentImageIndex - 1
-
         this.setState({
             currentImageIndex: index
         })
+        if (this.props.image.length <=1) {
+            return this.state.currentImageIndex
+        }else{
+            return null
+        }
     }
 
     nextImage(){
@@ -30,11 +34,16 @@ export default class Gallery extends Component{
     }
 
     render(){
+        console.log(this.props.image.length === 1 )
         return(
             <section>
                 <div className="carousel">
-                    <i className="fas fa-chevron-left" onClick={this.previousImage}></i>
-                    <i className="fas fa-chevron-right" onClick={this.nextImage}></i>
+                    {this.props.image.length !== 1 ?
+                        <React.Fragment>
+                            <i className="fas fa-chevron-left" onClick={this.previousImage}></i>
+                            <i className="fas fa-chevron-right" onClick={this.nextImage}></i>
+                        </React.Fragment> : null
+                    }
                     <img src={this.props.image[this.state.currentImageIndex]} alt="galerie" />
                 </div>
             </section>

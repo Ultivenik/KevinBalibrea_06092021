@@ -34,7 +34,6 @@ export default class Gallery extends Component{
     }
 
     render(){
-        console.log(this.props.image.length === 1 )
         return(
             <section>
                 <div className="carousel">

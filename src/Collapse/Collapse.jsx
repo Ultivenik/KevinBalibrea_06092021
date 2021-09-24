@@ -28,7 +28,7 @@ export default class Dropdown extends Component{
                     {this.state.isRotated ? <i className="fas fa-chevron-up"></i> : <i className="fas fa-chevron-down"></i>}
                 </div>
                 {this.state.isOpen ?
-                   ( <div className={this.props.classContent}>
+                   (<div className={this.props.classContent}>
                         {this.props.content}
                     </div>) : null
                 }

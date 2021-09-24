@@ -17,11 +17,6 @@ export default class Gallery extends Component{
         this.setState({
             currentImageIndex: index
         })
-        if (this.props.image.length <=1) {
-            return this.state.currentImageIndex
-        }else{
-            return null
-        }
     }
 
     nextImage(){

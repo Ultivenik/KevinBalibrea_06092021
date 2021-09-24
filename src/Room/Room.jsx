@@ -46,8 +46,9 @@ class Room extends Component{
                     })
                 }
             })
+
             if(!this.state.id){
-                   this.props.history.push("/notfound")
+                this.props.history.push("/notfound")
             }
         })
     }

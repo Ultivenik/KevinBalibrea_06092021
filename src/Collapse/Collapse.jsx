@@ -7,7 +7,6 @@ export default class Dropdown extends Component{
         this.state = {
             isOpen: false,
             isRotated: false,
-            aboutDatas: []
         }
         this.openDropdown = this.openDropdown.bind(this)
     }

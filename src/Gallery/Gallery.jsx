@@ -22,7 +22,6 @@ export default class Gallery extends Component{
     nextImage(){
         const lastIndex = this.props.image.length -1
         const index =  this.state.currentImageIndex === lastIndex ? 0 : this.state.currentImageIndex + 1
-
         this.setState({
             currentImageIndex: index
         })
@@ -32,6 +31,7 @@ export default class Gallery extends Component{
         return(
             <section>
                 <div className="carousel">
+                    {/* display arrows only if there is more than 1 photo */}
                     {this.props.image.length !== 1 ?
                         <React.Fragment>
                             <i className="fas fa-chevron-left" onClick={this.previousImage}></i>
